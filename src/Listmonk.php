@@ -42,4 +42,9 @@ class Listmonk
     {
         return $this->client->request('POST', '/api/tx', $data);
     }
+    
+    public function getTemplateById($template_id = 1)
+    {
+        return $this->client->request("GET", "/api/lists/{$template_id}");
+    }
 }
