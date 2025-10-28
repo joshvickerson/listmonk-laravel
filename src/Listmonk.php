@@ -28,20 +28,18 @@ class Listmonk
         return $this->client->request('GET', '/api/lists');
     }
     
-    /**
-     * Makes a GET request to /lists/{id}
-     *
-     * @param integer $listId Numerical id of the list in Listmonk
-     *
-     * @return Request API response
-     */
     public function getListById($list_id = 1)
     {
-            return $this->client->request("GET", "/api/lists/{$list_id}");
+        return $this->client->request("GET", "/api/lists/{$list_id}");
     }
 
     public function createList($data)
     {
         return $this->client->request('POST', '/api/lists', $data);
+    }
+    
+    public function sendTransaction($data)
+    {
+        return $this->client->request('POST', '/api/tx', $data);
     }
 }
