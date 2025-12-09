@@ -15,7 +15,7 @@ class Listmonk
     
     public function addSubscription($data)
     {
-        return $this->client->request('PUT', '/api/subscribers/lists', $filters);
+        return $this->client->request('PUT', '/api/subscribers/lists', $data);
     }
 
     public function getSubscribers($filters = [])
