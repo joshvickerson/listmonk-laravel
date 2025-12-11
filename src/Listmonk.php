@@ -17,6 +17,11 @@ class Listmonk
     {
         return $this->client->request('PUT', '/api/subscribers/lists', $data);
     }
+    
+    public function getSubscriberById($subscriber_id)
+    {
+        return $this->client->request('GET', "/api/subscribers/{$subscriber_id}");
+    }
 
     public function getSubscribers($filters = [])
     {
